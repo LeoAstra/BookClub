@@ -1,11 +1,234 @@
+<!--
+File: index.html
+GUI Assignment: Creating Your First Web Page
+A simple blog put together by Louis Oller.
+A big shoutout to W3Schools since a lot of the code snippets are 
+inspired by their website.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Louis Oller Blog</title>
+    <title>Book Club Blog</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- page content -->
+
+  <!-- I needed to get the sidebar to have it's own space so I wrapped the conent into a big div and pushed it left -->  
+
+    <div class="articles">
+
+        <h1>Louis's Book Club</h1>
+
+        <!-- This Div is the template I made for a blog post. It has the title, text, image, the link in a big blue box -->
+        <!-- For convenience I will annotate this one since theyre all the same -->
+        <div class="post">
+
+
+            <h2 id="Neuromancer">Neuromancer</h2>
+            <h4>A book we didn't like to much at the time but we keep coming back and referencing when reading others</h4>
+
+            <!-- I added a folder with images so that I can keep it organized and use it here -->
+            <img src="images/neuromancer.jpg" alt="alternatetext">
+            <p class="quote">
+                "Hotwired to the leading edges of art and technology, Neuromancer is a cyberpunk, 
+                science fiction masterpiece—a classic that ranks with 1984 and Brave New World as 
+                one of the twentieth century’s most potent visions of the future."
+            </p>
+
+            <!-- I embeded a link into this p so the link would look natural -->
+            <p>You can find more about Neuromancer on it's <a href="https://www.goodreads.com/book/show/6088007-neuromancer">Goodreads</a></p>
+        </div>
+
+        <div class="post">
+            <h2 id="Dune">Dune</h2>
+            <h4>This is one of the greatest series in Scifi. However this desert story was quite dry.</h4>
+            <img src="images/dune.jpg" alt="alternatetext">
+            <p class="quote">
+                "Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, 
+                heir to a noble family tasked with ruling an inhospitable world where the only 
+                thing of value is the “spice” melange, a drug capable of extending life and enhancing 
+                consciousness. Coveted across the known universe, melange is a prize worth killing for..."
+            </p>
+            <p>You can find more about Dune on it's 
+                <a href="https://www.goodreads.com/book/show/44767458-dune?from_search=true&from_srp=true&qid=bGeb5VK61C&rank=1">Goodreads</a></p>
+        </div>
+
+        <div class="post">
+            <h2 id="Moon">The Moon is a harsh Mistress</h2>
+            <h4>Imagine if we sent all the criminals to the moon, then they revolted against the earth. We love this 10/10</h4>
+            <img src="images/moon.jpg" alt="alternatetext">
+            <p class="quote">
+                "It is a tale of revolution, of the rebellion of a former penal colony on the Moon 
+                against its masters on the Earth. It is a tale of a culture whose family structures 
+                are based on the presence of two men for every woman, leading to novel forms of marriage 
+                and family. It is the story of the disparate people, a computer technician, a vigorous 
+                young female agitator, and an elderly academic who become the movement's leaders, and of 
+                Mike, the supercomputer whose sentience is known only to the revolt's inner circle, who 
+                for reasons of his own is committed to the revolution's ultimate success."
+            </p>
+            <p>You can find more about The Moon is a Harsh Mistress on it's 
+                <a href="https://www.goodreads.com/book/show/16690.The_Moon_Is_a_Harsh_Mistress">Goodreads</a></p>
+        </div>
+
+        <div class="post">
+            <h2 id="Crake">Oryx and Crake</h2>
+            <h4>This book is a bizzare post apocaliptic that we still crack jokes about.</h4>
+            <img src="images/oryxcrake.jpg" alt="alternatetext">
+            <p class="quote">
+                "Oryx and Crake is at once an unforgettable love story and a compelling vision of the future.
+                Snowman, known as Jimmy before mankind was overwhelmed by a plague, is struggling to 
+                survive in a world where he may be the last human, and mourning the loss of his best friend, 
+                Crake, and the beautiful and elusive Oryx whom they both loved. In search of answers, Snowman 
+                embarks on a journey–with the help of the green-eyed Children of Crake–through the lush wilderness 
+                that was so recently a great city, until powerful corporations took mankind on an uncontrolled
+                genetic engineering ride. Margaret Atwood projects us into a near future that is both all too 
+                familiar and beyond our imagining."
+            </p>
+            <p>You can find more about Oryx and Crake on it's 
+                <a href="https://www.goodreads.com/book/show/46756.Oryx_and_Crake?ac=1&from_search=true&qid=lPPGBlTqW0&rank=1">Goodreads</a></p>
+        </div>
+
+        <div class="post">
+            <h2 id="X">The Devotion of Suspect X</h2>
+            <h4>Keigo Higashino is a Genius of the genre. We've read 2 of his books and looking for more.</h4>
+            <img src="images/sus.jpg" alt="alternatetext">
+            <p class="quote">
+                "Yasuko lives a quiet life, working in a Tokyo bento shop, a good mother to her only child.
+                But when her ex-husband appears at her door without warning one day, her comfortable world is shattered."
+            </p>
+            <p>You can find more about Oryx and Crake on it's 
+                <a href="https://www.goodreads.com/book/show/8686068-the-devotion-of-suspect-x">Goodreads</a></p>
+        </div>
+
+
+        <!-- I mention this in the CSS page too but -->
+        <p class="tablepreview"> Below are my ratings of the books we have read.
+            Note that I am easily entertained.
+            I will grade on the scale that a book with a 1 should be burned.
+            A 3 is subpar and didn't enjoy.
+            A 5 is an average book with nothing wrong with it.
+            A 7 would be recommended to a friend.
+            A 10 should not be in ever classroom.
+        </p>
+
+        <!-- I mention this in the CSS page too but the table below is completely from W3Schools, but filled in by me-->
+        <!-- I thought it was really cool so I copied it to work with it -->
+
+        <!-- This part sets up the JS for the search bar -->
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for titles.." title="Type in a name">
+
+        <!-- This is the wrapper for the table -->
+        <table id="myTable">
+
+            <!-- This top part makes up the named sections in the table, the different columns -->
+            <tr class="header">
+                <th style="width:60%;">Name</th>
+                <th style="width:40%;">Personal Ratinig</th>
+            </tr>
+
+            <!-- Below are all the entries into the table -->
+            <tr>
+                <td>Neuromancer - William Gibson</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Legion - Brandon Sanderson</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>The Moon is a Harsh Mistress - Robert A. Heinlein</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Nick of Time - Ted Bell</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Children of TIme -  Adrian Tchaikovsky</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Dune - Frank Herbert, 1/8 in the Dune series</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Oryx and Crake - Margaret Atwood</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Blindsight - Peter Watts</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Sapiens: A Brief History of Humankind - Yuval Noah Harari</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>The Devotion of Suspect X - Keigo Higashino</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Lock In - John Scalzi</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>No Longer Human - Osamu Dazais</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Hyperion - Dan Simmons</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Malice - Keigo Higashino</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Diaspora - Greg Egan </td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>The Left Hand of Darkness - Ursula K. Le Guin</td>
+                <td>6</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- For absolutely no reason I thought it would be cool to have a sidebar -->
+    <!-- I went back and gave all the book titles an id so I can make internal links to them here -->
+    <div class="sidebar">
+        <h3><a href="#Neuromancer">Neuromancer</a></h3>
+        <h3><a href="#Dune">Dune</a></h3>
+        <h3><a href="#Moon">The Moon is a Harsh Mistress</a></h3>
+        <h3><a href="#Crake">Oryx and Crake</a></h3>
+        <h3><a href="#X">The Devotion of Suspect X</a></h3>
+    </div>
+
+
+
+    <!-- yes I know this is bad form but I really wanted to play with it so I copied it here -->
+
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }       
+        }
+    }
+</script>
   </body>
 </html>

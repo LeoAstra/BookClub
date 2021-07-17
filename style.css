@@ -1,0 +1,155 @@
+/*
+Colors are a courtesy from colors.co
+Charcoal: 2F4858
+Queen Blue: 33658A
+Dark Sky Blue: 86BBD8
+Honey Yellow: F6AE2D
+Safety Orange Blaze Orange: F26419
+*/
+
+/* 
+    This h1 was my experimental template for making a big rounded box, It has the background color
+    and it has the margins and padding to fill up most of the top while giving everything else space.
+*/
+h1 {
+    border-radius: 25px;
+    font-size: 400%;
+    text-align: center;
+    background-color: #33658A;
+    padding: 50px;
+    margin: 15px;
+}
+
+
+h2 {
+    font-size: 300%;
+    color: #2F4858;
+}
+
+/* 
+    This is the actual CSS that is making the article boxes, Not much needs to be added here, it's based off 
+    of the h1 and its just a box with colors. Something to note would be that I didn't want the blue box
+    to fill the whole scren so I left it at 66% with some intentional white to the right for contrast.
+    I thought that if the boxes reached all the way they would feel empty, and if I filled them with text it 
+    would feel to verbose.
+*/
+
+.post {
+    border-radius: 25px;
+    max-width: 66%;
+    background-color: #86BBD8;
+    padding: 50px;
+    margin: 30px;
+}
+
+/* 
+    Similar to the article's boxes I didn't want the images and text to feel crowded so I had them leave space
+    to the right.
+*/
+
+img {
+    max-width: 66%;
+}
+
+.quote {
+    font-style: italic;
+    max-width: 70%;
+}
+
+/* 
+    All the content has a left margin to give space for the navbar
+*/
+.articles {
+    margin-left: 160px;
+}
+
+/* 
+    This is a tip from W3schools, give the navbar space, but make sure the width doesn't
+    go beyond where the articles margin is. This is mostly inspired by w3schools, I first tried
+    making a sidebar that would float with the articles, then I saw that a fixed box to the left
+    was a more elegant solution.
+*/
+.sidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2F4858;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/*
+    I didn't want the links to be ugly so I had them look unvisited and highlight in the color scheme when hovered.
+*/
+
+
+.sidebar a {
+    text-decoration: none;
+    color: #F26419;
+}
+
+.sidebar a:hover {
+    color: #F6AE2D;
+    background-color: #86BBD8;
+}
+
+h3 {
+    font-size: 150%;
+    color: #F26419;
+    margin: 10px;
+    overflow: hidden;
+    padding-top: 20px;;
+}
+
+/*
+    I wanted the table's description to fit the theme instead of it being a block of text.
+    So I gave it a similar box to the articles.
+*/
+
+
+.tablepreview {
+    font-size: 150%;
+    background-color: #86BBD8;
+    padding: 50px;
+    margin: 30px;
+    border-radius: 25px;
+}
+
+/*The CSS Below is completely taken from W3Schools Filter Table Example. I've only changed colors.
+I really like the way it looks and thought it would be cool to do with the books we've read*/
+
+#myInput {
+    background-image: "images/search";
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    margin-bottom: 500px;
+}
+
+#myTable th, #myTable td {
+    text-align: left;
+    padding: 12px;
+}
+
+#myTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+    background-color: #86BBD8;
+}
+
